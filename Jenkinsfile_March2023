@@ -3,10 +3,11 @@ node{
  stage('1.CodeClone'){
     git credentialsId: 'gitHubCredentials', url: 'https://github.com/LandmakTechnology/maven-web-application'
    }
+   /*  
  stage('2MavenBuild'){
    sh "${mavenHome}/bin/mvn package"
  }
- /* 
+  
  stage('3codeQuality'){
  	 sh "${mavenHome}/bin/mvn sonar:sonar"
  }
