@@ -95,7 +95,7 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://54.152.34.169:8081/repository/developer1release/</url>
+	      <url>http://34.234.90.127:8081/repository/developer1release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
