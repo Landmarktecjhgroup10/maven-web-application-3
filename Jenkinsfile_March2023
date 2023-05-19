@@ -1,5 +1,7 @@
 node{
 	def mavenHome = tool name: 'Maven3.9.1'
+	stage('CodeClone'){
+	git "
  stage('2MavenBuild'){
    sh "${mavenHome}/bin/mvn package"
  }
@@ -19,7 +21,7 @@ node{
       }
   }
     stage('7deploy2Prod'){
- 	 deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://3.88.173.41:8080/')], contextPath: null, war: 'target/*.war'
+ 	deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://44.211.76.167:8080/')], contextPath: null, war: 'target/*.war'
  }
   stage('8emailNotify'){
   	emailext body: '''Hello Team,
